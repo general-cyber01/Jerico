@@ -27,3 +27,10 @@ Clone the repository:
 git clone https://github.com/YOUR_USERNAME/jerico.git
 cd jerico
 sudo python3 setup.py install
+
+## Usage
+
+### Show help
+```bash
+jerico --help
+
