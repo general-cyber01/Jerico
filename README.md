@@ -24,7 +24,7 @@ This tool is intended for learning, system inspection, and basic security awaren
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/jerico.git
+git clone https://github.com/general-cyber01/jerico.git
 cd jerico
 sudo python3 setup.py install
 
