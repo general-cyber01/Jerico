@@ -1,6 +1,6 @@
 # Jerico
 
-Jerico is a lightweight Linux security scanning CLI tool designed to help users quickly inspect their system for basic security-related information.
+Jerico v1.0 is a lightweight Linux security scanning CLI tool designed to help users quickly inspect their system for basic security-related information.
 
 It focuses on:
 - Running processes
