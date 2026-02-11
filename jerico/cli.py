@@ -15,7 +15,7 @@ def parse_args():
         argparse.Namespace: Parsed arguments
     """
     parser = argparse.ArgumentParser(
-        description="Jerico – Lightweight Linux Host Monitoring Tool"
+        description="Jerico – Robust Linux Host Monitoring Tool"
     )
 
     parser.add_argument(
