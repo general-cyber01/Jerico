@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
+"""
+Jerico CLI – Argument parser for Linux Host Monitoring Tool
+Author: Abdullahi Abdmaleek
+"""
 
 import argparse
-from jerico.main import run_all, run_process_scan, run_disk_scan
 
 
-def main():
+def parse_args():
+    """
+    Parse command-line arguments for Jerico.
+
+    Returns:
+        argparse.Namespace: Parsed arguments
+    """
     parser = argparse.ArgumentParser(
         description="Jerico – Lightweight Linux Host Monitoring Tool"
     )
@@ -12,37 +21,19 @@ def main():
     parser.add_argument(
         "-a", "--all",
         action="store_true",
-        help="Run full system scan"
+        help="Run full system scan (processes + disk)"
     )
 
     parser.add_argument(
         "-p", "--process",
         action="store_true",
-        help="Scan running processes"
+        help="Scan running processes only"
     )
 
     parser.add_argument(
         "-d", "--disk",
         action="store_true",
-        help="Scan disk for large/suspicious files"
+        help="Scan disk for large/suspicious files only"
     )
 
-    args = parser.parse_args()
-
-    # If no argument is provided
-    if not any(vars(args).values()):
-        parser.print_help()
-        return
-
-    if args.all:
-        run_all()
-
-    if args.process:
-        run_process_scan()
-
-    if args.disk:
-        run_disk_scan()
-
-
-if __name__ == "__main__":
-    main()
+    return parser.parse_args()
